@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <style>
+
+        .container-row {
+             width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0px auto;
+            justify-content: center;
+        }
+
+        .container-4 {
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 01px solid  #ccc;
+            color: black;
+            margin-bottom: 20px;
+            position: relative; 
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .avatar {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .username {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .post-images {
+            width: 100%;
+            border-radius: 5px !important;
+            margin-top: 1px;
+        }
+
+        .apply-now {
+            width: 90%;
+            text-align: center;
+            margin: 15px auto;
+            display: block;
+            padding: 6px 10px;
+            color: black;
+            border: 02px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 650;
+            font-size: 16px;
+            position: relative;
+        }
+        
+        .apply-now:hover {
+            background-color: black;
+            color:white;
+        }
+
+        .live-badge {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            padding: 1px 8px;
+            text-align: center;
+            font-size: 12px;
+            width: 39px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            animation: blink 0.5s infinite alternate; 
+        }
+        .apply-end {
+            width: 60%;
+            text-align: center;
+            margin: 20px auto;
+            display: block;
+            padding: 6px 0px !important;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            position: relative;
+            font-weight: 650;
+            cursor: not-allowed;
+        }
+        .button-align {
+            display: flex;
+            justify-content: space-between; 
+        }
+
+        .view-it {
+            text-align: center;
+            margin: 19px auto;
+            display: block;
+            padding: 6px 02px;
+            background-color: #007bff;
+            color: white;
+            font-weight: 450;
+            border: 02px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 650;
+            font-size: 16px;
+            position: relative;
+            text-decoration: none; 
+            display: inline-block; 
+        }
+        
+        .view-it:hover{
+            
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 8px;
+            width: 152px;
+            border-radius: 8px;
+            z-index: 2;
+            font-size: 13px;
+            display: none;
+            bottom: calc(100% + 5px);
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .tooltip::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -8px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .apply-end:hover .tooltip {
+            display: block;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..900&display=swap');
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .more-button {
+        width: 20%;
+        margin: 0px auto;
+        font-size: 12px;
+  padding: 0.8em 0em;
+  background-color: #000;
+  border: 2px solid yellow;
+  border-radius: 1em;
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+  box-shadow: 2px 2px gray;
+    }
+
+        
+
+        @media screen and (min-width: 600px) and (max-width: 1023px) {
+    .container-4 {
+        width: 30.3%; 
+        margin-right: 5px;
+    }
+    .container-row {
+             width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            justify-content: center;
+        }
+        
+
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .container-4 {
+        width: calc(30.333% - 20px); 
+        margin-right: 12px;
+    }
+    
+    
+    
+}
+
+
+    
+    
+    .more-button:hover {
+  transform: translate(5px, -5px);
+}
+
+@media only screen and (max-width: 480px) {
+    .more-button {
+        width: 50%;
+        font-size: 13px;
+    }
+}
+
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="container-row">
+        <div class="container-4">
+            <div class="profile-header">
+                <img class="avatar" src="https://paycoincapital.com/wp-content/uploads/2023/10/PCC-300x300.png" alt="Avatar">
+                <div class="username">PayCoin Capital</div>
+                <i class="ri-verified-badge-fill"></i>
+            </div>
+            <p class="post-title">PCC Fund Program [ Live ]</p>
+            <img class="post-images" src="https://media.istockphoto.com/id/1367970117/photo/money-gradually-piled-highly-and-precess-from-start-to-goal.jpg?s=612x612&w=0&k=20&c=d77kcIewvBUYKP52vytcf9LYNQEKU1Z_koTQ_rc3XMU=" alt="Profile Image">
+            
+            <a href="/fund.html"><button class="apply-now">
+                <span class="live-badge">LIVE</span> Apply for this Program
+            </button></a>
+        </div>
+
+        
+    </div>
+    <a href="https://twitter.com/PayCoinCapital"><div class="more-button">view more >></div></a>
+</body>
+
+</html>
 
